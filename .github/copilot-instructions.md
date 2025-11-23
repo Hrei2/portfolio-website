@@ -32,7 +32,7 @@ Advanced animated portfolio website built with Next.js 15, TypeScript, Tailwind 
 ## Development Roadmap (80+ Hours)
 
 ### Phase 1: Core Pages & Routing (8-10h)
-- [ ] Home page with animated hero section
+- [x] Home page with animated hero section
 - [ ] About page with interactive timeline
 - [ ] Projects/Portfolio page with grid layout
 - [ ] Blog page with MDX support
