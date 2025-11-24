@@ -67,7 +67,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
             >
-                Full Stack Developer | Tech Enthusiast | Lifelong Learner | Designer
+                Self Proclaimed Full Stack Developer | Tech Enthusiast | Lifelong Learner | Designer
             </motion.p>
 
             {/* Description */}
@@ -77,7 +77,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
             >
-                Vibe coding my way through the digital universe, one line at a time.
+                Vibe coding my way through the digital universe, one line at a time whilst making two mistakes every line.
             </motion.p>
 
             {/* CTA Buttons */}
