@@ -102,23 +102,6 @@ export default function Hero() {
                     Contact Me
                 </Link>
             </motion.div>
-
-            {/* Scroll Indicator */}
-            <motion.div
-                className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1.5 }}
-            >
-                <motion.div
-                    animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center p-2"
-                >
-                    <motion.div className="w-1.5 h-3 bg-gray-600 dark:bg-gray-400 rounded-full" />
-                </motion.div>
-            </motion.div>
-
             </div>
         </section>
     )
