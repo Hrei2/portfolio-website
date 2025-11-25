@@ -62,9 +62,9 @@ export default function MaintenancePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          The site is currently undergoing scheduled maintenance.
+          The site is currently undergoing maintenance.
           <br />
-          We apologize for any inconvenience.
+          I apologize for any inconvenience.
         </motion.p>
 
         {/* Expected Time */}
@@ -76,7 +76,7 @@ export default function MaintenancePage() {
         >
           <div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse" />
           <p className="text-gray-700 dark:text-gray-300 font-medium">
-            Expected return time: ~30 minutes
+            Expected return time: ~too many minutes
           </p>
         </motion.div>
 
