@@ -110,12 +110,12 @@ export default function MaintenancePage() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
         >
-          Need urgent assistance? Contact us at{' '}
+          Need urgent assistance? Not the correct place to look! Call 112 or 911 depending on where you live!{' '}
           <a
             href="mailto:your@email.com"
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
-            your@email.com
+            {/*seit var ielikt epastu. manuprat nav un ari nebus nepieciesams*/}
           </a>
         </motion.p>
       </div>
