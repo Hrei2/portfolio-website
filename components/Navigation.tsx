@@ -29,7 +29,7 @@ export default function Navigation() {
         <motion.nav
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
                 isScrolled
-                    ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg'
+                    ? 'bg-white/95 dark:bg-gray-900/80 shadow-lg'
                     : 'bg-transparent'
             }`}
             initial={{ y: -100 }}
@@ -91,36 +91,25 @@ export default function Navigation() {
             </div>
 
             {/* Mobile Menu */}
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <motion.div
-                        className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <div className="px-4 py-6 space-y-4">
-                            {navLinks.map((link, index) => (
-                                <motion.div
-                                    key={link.href}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: index * 0.1 }}
-                                >
-                                    <Link
-                                        href={link.href}
-                                        className="block text-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-200"
-                                        onClick={() => setIsMobileMenuOpen(false)}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                </motion.div>
-                            ))}
+            <div className={`md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 transition-all duration-300 ease-in-out overflow-hidden ${
+                isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+            style={{ willChange: 'max-height, opacity'}}
+            >
+                <div className="px-4 py-6 space-y-4">
+                    {navLinks.map((link) => (
+                        <div key={link.href}>
+                            <Link
+                                href={link.href}
+                                className="block text-lg text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors duration-200"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                    {link.label}
+                            </Link>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    ))}
+                </div>
+            </div>
         </motion.nav>
     );
 }
