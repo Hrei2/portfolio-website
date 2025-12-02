@@ -31,7 +31,7 @@ export default function ProjectsPage() {
                     <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 dark:text-white mb-6">
                         My <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
                     </h1>
-                    <p className="text-4xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                         A collection of projects I've worked on
                     </p>
                 </motion.div>
@@ -45,6 +45,7 @@ export default function ProjectsPage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="group bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                         >
                             <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-600 overflow-hidden">
                                 <div className="absolute inset-0 flex items-center justify-center text-center text-white text-2xl font-bold">
@@ -59,21 +60,21 @@ export default function ProjectsPage() {
                                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                                     {project.description}
                                 </p>
-                            </div>
-                            {/* Tags */}
-                            <div className="flex flex-warp gap-2 mb-4">
-                                {project.tags.map((tag) => (
-                                    <span
-                                        key={tag}
-                                        className="px-3 py-1 bg-blue-100 dark:bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
 
-                            {/* Links */}
-                            <div className="flex gap-4">
+                                {/* Tags */}
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {project.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Links */}
+                                <div className="flex gap-4">
                                 <a
                                     href={project.github}
                                     target="_blank"
@@ -91,6 +92,7 @@ export default function ProjectsPage() {
                                     Live Demo
                                 </a>
                             </div>
+                        </div>
                         </motion.div>
                     ))}
                 </div>
