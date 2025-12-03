@@ -33,11 +33,11 @@ Advanced animated portfolio website built with Next.js 15, TypeScript, Tailwind 
 
 ### Phase 1: Core Pages & Routing (8-10h)
 - [x] Home page with animated hero section
-- [ ] About page with interactive timeline
-- [ ] Projects/Portfolio page with grid layout
+- [x] About page with interactive timeline
+- [x] Projects/Portfolio page with grid layout
 - [ ] Blog page with MDX support
-- [ ] Contact page with form validation
-- [ ] 404 and error pages with animations
+- [x] Contact page with form validation
+- [x] 404 and error pages with animations
 
 ### Phase 2: Advanced Animations (15-20h)
 - [ ] Scroll-triggered animations with Framer Motion
