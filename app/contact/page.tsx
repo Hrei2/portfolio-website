@@ -86,10 +86,10 @@ export default function ContactPage() {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                                        LinkedIn (not working as of now)
+                                        LinkedIn
                                     </h3>
-                                    <a href="https://www.404.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
-                                        LinkedIn will go here. for now 404.com lives here.
+                                    <a href="https://www.linkedin.com/in/haralds-reinvalds-02a244332/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
+                                        https://www.linkedin.com/in/haralds-reinvalds-02a244332/
                                     </a>
                                 </div>
                             </div>

@@ -35,7 +35,8 @@ Advanced animated portfolio website built with Next.js 15, TypeScript, Tailwind 
 - [x] Home page with animated hero section
 - [x] About page with interactive timeline
 - [x] Projects/Portfolio page with grid layout
-- [ ] Blog page with MDX support
+- [x] Blog page with MDX support
+- !!! NEED TO ADD MDX SUPPORT !!!
 - [x] Contact page with form validation
 - [x] 404 and error pages with animations
 
