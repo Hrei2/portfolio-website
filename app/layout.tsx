@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import ScrollProgress from '@/components/ScrollProgress'
+
 
 export const metadata: Metadata = {
     title: "My Portfolio",
@@ -17,7 +17,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <ScrollProgress />
                 <Navigation />
                 {children}
                 <Footer />
