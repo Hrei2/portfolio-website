@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
     title: "My Portfolio",
@@ -17,6 +17,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
+                <CustomCursor />
                 <Navigation />
                 {children}
                 <Footer />

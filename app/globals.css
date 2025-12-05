@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+* {
+    cursor: none !important;
+}
+
+@media (hover: none) {
+    * {
+        cursor: auto !important;
+    }
+}
+
 :root {
     --background: #ffffff;
     --foreground: #171717;

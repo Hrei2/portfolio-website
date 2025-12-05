@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import TextReveal from './animations/TextReveal';
 
 export default function Hero() {
     return (
