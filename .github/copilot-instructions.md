@@ -69,7 +69,7 @@ Advanced animated portfolio website built with Next.js 15, TypeScript, Tailwind 
 - [ ] Tooltip component
 
 ### Phase 4: Projects Showcase (8-12h)
-- [ ] Project filtering system
+- [x] Project filtering system
 - [ ] Search functionality
 - [ ] Category/tag system
 - [ ] Project detail pages

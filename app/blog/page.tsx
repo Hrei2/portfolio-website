@@ -1,25 +1,27 @@
-// I will use this blog system only for now.
-// I hope to remake it to use a portal from the webpage itself later on to manage posts.
-// This is a really bad system but it is only temporary.
-
 'use client';
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { getAllPosts } from '@/lib/blog';
 
 export default function BlogPage() {
     const posts = [
         {
-            id: 1,
+            slug: 'getting-started-nextjs',
+            title: 'Getting Started with Next.js 15',
+            excerpt: 'Learn how to build modern web applications with Next.js 15',
+            date: '2025-11-20',
+            readTime: '5 min read',
+            tags: ['Next.js', 'React', 'Web Development'],
+        },
+        {
+            slug: 'test-blog-post',
             title: 'Test Blog Post',
             excerpt: 'Making a test blog post to see how this will look like.',
             date: '2025-11-30',
             readTime: '1 min read',
             tags: ['Test', 'Development'],
-            slug: 'test-blog-post',
         },
-        // I don't believe I will add any more posts with this system.
-        // A new system will be implemented later on.
     ];
 
     return (
@@ -44,7 +46,7 @@ export default function BlogPage() {
                 <div className="space-y-8">
                     {posts.map((post, index) => (
                         <motion.article
-                            key={post.id}
+                            key={post.slug}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -62,7 +64,7 @@ export default function BlogPage() {
                             </div>
 
                             <Link href={`/blog/${post.slug}`}>
-                                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 transition-colors duration-300">
+                                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
                                     {post.title}
                                 </h2>
                             </Link>
@@ -88,7 +90,7 @@ export default function BlogPage() {
                                 className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:underline"
                             >
                                 Read more →
-                            </Link>
+                            </Link> 
                         </motion.article>
                     ))}
                 </div>
