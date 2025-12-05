@@ -62,14 +62,14 @@ export default function Hero() {
             </motion.h1>
 
             {/* Subtitle with typing effect placeholder */}
-            <p
+            <motion.p
                 className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8 font-light"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
             >
                 Self Proclaimed Full Stack Developer | Tech Enthusiast | Lifelong Learner | Designer
-            </p>
+            </motion.p>
 
             {/* Description */}
             <motion.p
