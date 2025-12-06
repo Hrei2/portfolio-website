@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -44,7 +45,7 @@ export default function Navigation() {
                             whileHover={{ scale: 1.05 }}
                             transition={{ type: 'spring', stiffness: 300 }}
                         >
-                            Logo
+                            HR
                         </motion.span>
                     </Link>
 
@@ -62,12 +63,19 @@ export default function Navigation() {
                         ))}
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden relative w-10 h-10 flex items-center justify-center"
-                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
+                    {/* Theme Toggle - Desktop */}
+                    <div className="hidden md:block">
+                        <ThemeToggle />
+                    </div>
+
+                    {/* Mobile Menu Button and Theme Toggle */}
+                    <div className="md:hidden flex items-center gap-2">
+                        <ThemeToggle />
+                        <button
+                            className="relative w-10 h-10 flex items-center justify-center"
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                            aria-label="Toggle menu"
+                        >
                         <div className="w-6 flex flex-col gap-1.5">
                             <motion.span
                                 className="w-full h-0.5 bg-gray-900 dark:bg-white"
@@ -86,6 +94,7 @@ export default function Navigation() {
                             />
                         </div>
                     </button>
+                    </div>
                 </div>
             </div>
 
