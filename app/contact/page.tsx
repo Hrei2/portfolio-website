@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+// import ContactForm from '@/components/ContactForm';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ export default function ContactPage() {
                         Get In <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Touch</span>
                     </h1>
                     <p className="text-xl text-gray-600 dark:text-gray-300">
-                        Have questions or want to work together? Reach out using the form below! (Form does not work for now!)
+                        Have questions? Reach out using the form below! (Form should work! I do not gurantee a response!)
                     </p>
                 </motion.div>
 

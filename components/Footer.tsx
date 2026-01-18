@@ -32,7 +32,7 @@ export default function Footer() {
                             </span>
                         </Link>
                         <p className="text-gray-600 dark:text-gray-400 text-sm">
-                            Some text
+                            Project made for Midnight YSWS presented by the amazing team at HackClub!
                         </p>
                     </div>
 
